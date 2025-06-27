@@ -1,0 +1,16 @@
+let n = parseInt(prompt("Digite um número inteiro positivo: "));
+let desicao = "s";
+while (desicao.toLowerCase() === "s") {
+    while (n <= 0) {
+        alert("Número inválido! Não é um inteiro positivo.");
+        n = parseInt(prompt("Digite um número inteiro positivo: "));
+    }
+    let fatorial = 1;
+    for (let i = 1; i <=n; i++) {
+        console.log(fatorial);
+        fatorial *= i;
+        console.log(fatorial);
+    }
+    console.log(`O fatorial de ${n} é: ${fatorial}`);
+    desicao = prompt("Deseja calcular o fatorial de outro número? (s/n)");
+}
