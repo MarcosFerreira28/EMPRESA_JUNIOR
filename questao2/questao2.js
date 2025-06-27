@@ -1,7 +1,7 @@
 let desicao = "s";
 while (desicao.toLowerCase() === "s") {
     let n = parseInt(prompt("Digite um número inteiro positivo: "));
-    while (n <= 0) {
+    while (n <= 0 || Number.isNaN(n)) {
         alert("Número inválido! Não é um inteiro positivo, tente novamente.");
         n = parseInt(prompt("Digite um número inteiro positivo: "));
     }
