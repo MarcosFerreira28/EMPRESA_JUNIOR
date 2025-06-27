@@ -1,6 +1,6 @@
-let n = parseInt(prompt("Digite um número inteiro positivo: "));
 let desicao = "s";
 while (desicao.toLowerCase() === "s") {
+    let n = parseInt(prompt("Digite um número inteiro positivo: "));
     while (n <= 0) {
         alert("Número inválido! Não é um inteiro positivo.");
         n = parseInt(prompt("Digite um número inteiro positivo: "));
