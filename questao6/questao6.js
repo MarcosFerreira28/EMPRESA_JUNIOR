@@ -12,4 +12,10 @@ function Fibonacci(n){
 }
 
 let n = parseInt(prompt("Digite um número inteiro positivo: "));
-console.log(Fibonacci(n))
+
+let numeros = [];
+
+for (let i = 1; i <= n; i++) {
+    numeros.push(Fibonacci(i));
+}
+console.log(`Os ${n} primeiros números da sequência de fibonacci são: ` + numeros);
