@@ -3,13 +3,22 @@ let frase = prompt("Digite uma frase: ");
 frase = frase.toLowerCase();
 frase = frase.split(" ");
 
-console.log(frase);
-console.log(frase[frase.length - 1]);
+fraseOriginal = "";
+for (let i = 0; i <= frase.length - 1; i++){
+    fraseOriginal += frase[i];
+}
+console.log(fraseOriginal);
 
 let fraseInvertida = "";
 for (let i = frase.length - 1; i >= 0; i--) {
     for (let j = frase[i].length - 1; j >= 0; j--){
         fraseInvertida += frase[i][j];
-        console.log(fraseInvertida);
     }
+}
+console.log(fraseInvertida);
+
+if (fraseInvertida == fraseOriginal) {
+    console.log("A frase é um palíndromo.");
+}else {
+    console.log("A frase não é um palíndromo.");
 }
