@@ -7,7 +7,6 @@ fraseOriginal = "";
 for (let i = 0; i <= frase.length - 1; i++){
     fraseOriginal += frase[i];
 }
-console.log(fraseOriginal);
 
 let fraseInvertida = "";
 for (let i = frase.length - 1; i >= 0; i--) {
@@ -15,7 +14,6 @@ for (let i = frase.length - 1; i >= 0; i--) {
         fraseInvertida += frase[i][j];
     }
 }
-console.log(fraseInvertida);
 
 if (fraseInvertida == fraseOriginal) {
     console.log("A frase é um palíndromo.");
