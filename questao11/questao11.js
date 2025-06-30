@@ -4,7 +4,8 @@ let arrayNumeros = []
 
 for (let i = 1; i <= qtdNumeros; i++) {
     let n = parseInt(prompt("Insira o " + i + " número da lista:"));
-    arrayNumeros.push(n);
+    if (!isNaN(n))
+        arrayNumeros.push(n);
 }
 
 let qtd = 0;
