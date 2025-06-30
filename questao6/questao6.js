@@ -18,4 +18,9 @@ let numeros = [];
 for (let i = 1; i <= n; i++) {
     numeros.push(Fibonacci(i));
 }
-console.log(`Os ${n} primeiros números da sequência de fibonacci são: ` + numeros);
+
+if(n < 0){
+    alert("ERRO! O número inserido deve ser positivo.");
+}else{
+    console.log(`Os ${n} primeiros números da sequência de fibonacci são: ` + numeros);
+}
