@@ -6,4 +6,11 @@ for (let i = 1; i <= qtdNumeros; i++) {
     let n = parseInt(prompt("Insira o " + i + " número da lista:"));
     arrayNumeros.push(n);
 }
-console.log("A lista de números é: " + arrayNumeros);
+
+let qtd = 0;
+for (let i = 1; i < arrayNumeros.length; i++){
+    if (arrayNumeros[i] > arrayNumeros[i - 1])
+        qtd++;
+}
+
+console.log(qtd);
