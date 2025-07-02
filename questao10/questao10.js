@@ -6,7 +6,7 @@ while (opcao != 3) {
 
     switch (opcao){
         case 1:
-            let nome = promt("insira o nome do cliente da ser atendido: ");
+            let nome = prompt("insira o nome do cliente da ser atendido: ");
             clientes.push(nome);
         
         case 2:
