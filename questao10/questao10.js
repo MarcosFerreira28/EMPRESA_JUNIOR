@@ -2,8 +2,13 @@ let opcao = 4;
 clientes = [];
 
 while (opcao != 3) {
+    
+    let fila = [];
+    for (let i = 1; i <= clientes.length; i++) {
+        fila.push(i + "° " + clientes[i - 1]);
+    }
 
-    opcao = parseInt(prompt("Pessoas em espera: " + clientes.join(", ") + "  Digite a opção desejada:\n1 - Novo Cliente\n2 - Atender Cliente\n3 - Sair"));
+    opcao = parseInt(prompt("Pessoas em espera: " + fila.join(", ") + "  \nDigite a opção desejada:\n1 - Novo Cliente\n2 - Atender Cliente\n3 - Sair"));
 
     switch (opcao){
         case 1:
@@ -29,7 +34,6 @@ while (opcao != 3) {
         default:
             console.log("Opção inválida! Insira um número de 1 a 3.");
             break;
-
     }
 
 }
