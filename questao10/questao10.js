@@ -12,11 +12,10 @@ while (opcao != 3) {
         case 2:
             console.log("Cliente que está sendo atendido: " + clientes[0]);
             clientes.shift();
-            
+
         default:
             console.log("Opção inválida! Insira um número de 1 a 3.");
 
     }
-
 
 }
