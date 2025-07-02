@@ -7,15 +7,12 @@ while (opcao != 3) {
 
     switch (opcao){
         case 1:
-
             let nome = prompt("insira o nome do cliente da ser atendido: ");
             clientes.push(nome);
             break;
         
         case 2:
-
-            if (clientes.lenght !== 0){
-                console.log(clientes.lenght);
+            if (clientes.length !== 0){
                 console.log("Cliente que está sendo atendido: " + clientes[0]);
                 clientes.shift();
             }
