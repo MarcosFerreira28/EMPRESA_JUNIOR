@@ -7,7 +7,7 @@ while (opcao != 3) {
 
     switch (opcao){
         case 1:
-            
+
             let nome = prompt("insira o nome do cliente da ser atendido: ");
             clientes.push(nome);
             break;
@@ -15,6 +15,7 @@ while (opcao != 3) {
         case 2:
 
             if (clientes.lenght !== 0){
+                console.log(clientes.lenght);
                 console.log("Cliente que está sendo atendido: " + clientes[0]);
                 clientes.shift();
             }
@@ -22,6 +23,10 @@ while (opcao != 3) {
                 console.log("Não há clientes na fila.");
             }
             
+            break;
+        
+        case 3:
+            console.log("Encerrando o programa.");
             break;
 
         default:
