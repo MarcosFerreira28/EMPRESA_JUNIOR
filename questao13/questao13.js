@@ -57,8 +57,18 @@ while (opcao !== 5){
         case 1:
             let nome = prompt("Digite o nome do jogador:");
             let idade = parseInt(prompt("Digite a idade do jogador:"));
+            if (isNaN(idade) || idade <= 0) {
+                console.log("Idade inválida! Por favor, insira um número positivo.");
+                break;
+            }
+
             let posicao = prompt("Digite a posição do jogador:");
             let pontuacao = parseFloat(prompt("Digite a pontuação do jogador:"));
+            if (isNaN(pontuacao) || pontuacao < 0) {
+                console.log("Pontuação inválida! Por favor, insira um número maior ou igual a 0.");
+                break;
+            }
+        
             AdicionaJogador(nome, idade, posicao, pontuacao);
             console.log("Jogador adicionado!");
             break;
