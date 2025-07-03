@@ -46,20 +46,39 @@ function CalcularPontuacaoMedia(time){
 }
 
 
-
 let time = [];
-AdicionaJogador("KAIO JORGE", 23, "atacante", 19); // colocar pro usuário inserir
-AdicionaJogador("GABRIEL MENINO", 22, "meio-campo", 15);
-AdicionaJogador("GABRIEL BARBOSA", 27, "atacante", 20);
-AdicionaJogador("GABRIEL JESUS", 26, "atacante", 22);
-AdicionaJogador("GABRIEL MAGALHÃES", 25, "zagueiro", 18);
-AdicionaJogador("GABRIEL MARTINELLI", 21, "atacante", 21);
-console.log(time);
+let opcao = 0
 
-let jogadores = BuscaPorPosicao("atacante");
-console.log(jogadores);
+while (opcao !== 5){
+    
+    opcao = parseInt(prompt("Digite a opção desejada:\n1 - Adicionar Jogador\n2 - Busca por posição\n3 - Listar time\n4 - Calcular pontuação média\n5 - Sair"));
 
-ListarTime(time);
-
-let media = CalcularPontuacaoMedia(time);
-console.log("media: " + media.toFixed(2));
+    switch (opcao) {
+        case 1:
+            let nome = prompt("Digite o nome do jogador:");
+            let idade = parseInt(prompt("Digite a idade do jogador:"));
+            let posicao = prompt("Digite a posição do jogador:");
+            let pontuacao = parseFloat(prompt("Digite a pontuação do jogador:"));
+            AdicionaJogador(nome, idade, posicao, pontuacao);
+            console.log("Jogador adicionado!");
+            break;
+        case 2:
+            let pos = prompt("Digite a posição que deseja buscar:");
+            let jogadores = BuscaPorPosicao(pos);
+            ListarTime(jogadores); // usado a função de listar o time para listar os jogadores com a posição desejada
+            break;
+        case 3:
+            ListarTime(time);
+            break;
+        case 4:
+            media = CalcularPontuacaoMedia(time);
+            console.log("A pontuação média do time é: " + media.toFixed(2));
+            break;
+        case 5:
+            console.log("Encerrando o programa.");
+            break;
+        default:
+            console.log("Opção inválida! Por favor, insira um número de 1 a 5.");
+            break;
+    }
+}
