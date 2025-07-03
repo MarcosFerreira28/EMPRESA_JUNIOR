@@ -17,21 +17,25 @@ function BuscaPorPosicao(posicao){
         }
     }
     if (jogadoresPorPosicao.length === 0) {
-        console.log("Não existem jogadores para essa posição.");
-        return;
+        console.log("Não existem jogadores no time para essa posição.");
     }
     return jogadoresPorPosicao;
 }
 
-function ListarTime(time){
+function ListarTime(time, jogadoresPorPosicao = false){
     if (time.length !== 0) {
-        console.log("Jogadores do time:");
+        if (!jogadoresPorPosicao)
+            console.log("Jogadores do time:");
+        else
+            console.log("Jogadores da posição solicitada:");
         for (let i = 0; i < time.length; i++){
             console.log(`Nome: ${time[i].nome}, Posição: ${time[i].posicao}, Idade: ${time[i].idade}, Pontuação: ${time[i].pontuacao}`); 
         }
     }
     else {
-        console.log("O time não tem jogadores.");
+        if (!jogadoresPorPosicao){
+            console.log("O time não tem jogadores.");
+        }
     }
 }
 
@@ -75,7 +79,7 @@ while (opcao !== 5){
         case 2:
             let pos = prompt("Digite a posição que deseja buscar:");
             let jogadores = BuscaPorPosicao(pos);
-            ListarTime(jogadores); // usado a função de listar o time para listar os jogadores com a posição desejada
+            ListarTime(jogadores, true); // usado a função de listar o time para listar os jogadores com a posição desejada
             break;
         case 3:
             ListarTime(time);
