@@ -24,11 +24,11 @@ function BuscaPorPosicao(posicao){
 }
 
 function ListarTime(time){
-    
+
     if (time.length !== 0) {
         console.log("Jogadores do time:");
         for (let i = 0; i < time.length; i++){
-            console.log("Nome: " + time[i].nome + ", Camisa: " + time[i].pontuacao); //achei somente ncessário listar o nome e camisa de cada jogador
+            console.log(`Nome: ${time[i].nome}, Posição: ${time[i].posicao}, Idade: ${time[i].idade}, Pontuação: ${time[i].pontuacao}`); 
         }
     }
     else {
