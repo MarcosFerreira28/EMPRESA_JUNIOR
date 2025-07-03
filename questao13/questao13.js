@@ -10,6 +10,7 @@ function AdicionaJogador(nome, idade, posicao, pontuacao){
 
 function BuscaPorPosicao(posicao){
     let jogadoresPorPosicao = [];
+
     for (let i = 0; i < time.length; i++){
         if(time[i].posicao.toLowerCase() === posicao.toLowerCase()){
             jogadoresPorPosicao.push(time[i]);
@@ -22,6 +23,29 @@ function BuscaPorPosicao(posicao){
     return jogadoresPorPosicao;
 }
 
+function ListarTime(time){
+    
+    if (time.length !== 0) {
+        console.log("Jogadores do time:");
+        for (let i = 0; i < time.length; i++){
+            console.log("Nome: " + time[i].nome + ", Camisa: " + time[i].pontuacao); //achei somente ncessário listar o nome e camisa de cada jogador
+        }
+    }
+    else {
+        console.log("O time não tem jogadores.");
+    }
+}
+
 let time = [];
 AdicionaJogador("KAIO JORGE", 23, "atacante", 19); // colocar pro usuário inserir
+AdicionaJogador("GABRIEL MENINO", 22, "meio-campo", 15);
+AdicionaJogador("GABRIEL BARBOSA", 27, "atacante", 20);
+AdicionaJogador("GABRIEL JESUS", 26, "atacante", 22);
+AdicionaJogador("GABRIEL MAGALHÃES", 25, "zagueiro", 18);
+AdicionaJogador("GABRIEL MARTINELLI", 21, "atacante", 21);
 console.log(time);
+
+let jogadores = BuscaPorPosicao("atacante");
+console.log(jogadores);
+
+ListarTime(time);
