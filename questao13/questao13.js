@@ -24,7 +24,6 @@ function BuscaPorPosicao(posicao){
 }
 
 function ListarTime(time){
-
     if (time.length !== 0) {
         console.log("Jogadores do time:");
         for (let i = 0; i < time.length; i++){
@@ -35,6 +34,18 @@ function ListarTime(time){
         console.log("O time não tem jogadores.");
     }
 }
+
+function CalcularPontuacaoMedia(time){
+    let soma = 0;
+    
+    for (let i = 0; i < time.length; i++){
+        soma += time[i].pontuacao;
+    }
+
+    return soma / time.length;
+}
+
+
 
 let time = [];
 AdicionaJogador("KAIO JORGE", 23, "atacante", 19); // colocar pro usuário inserir
@@ -49,3 +60,6 @@ let jogadores = BuscaPorPosicao("atacante");
 console.log(jogadores);
 
 ListarTime(time);
+
+let media = CalcularPontuacaoMedia(time);
+console.log("media: " + media.toFixed(2));
